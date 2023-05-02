@@ -10,7 +10,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - run: echo 'yay'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
