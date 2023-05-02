@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - run: echo 'release tag'
-      - run: git config --local user.name test && git config --local user.email "something@mail.com" && git tag -a "$RANDOM" -m "new tag" && git push --tags
+      - name: release-tag
+        run: git config --local user.name test && git config --local user.email "something@mail.com" && git tag -a "$RANDOM" -m "new tag" && git push --tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
