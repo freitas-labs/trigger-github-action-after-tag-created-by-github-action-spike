@@ -10,6 +10,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
       - run: echo 'release tag'
       - run: git tag -a "$RANDOM" -m "new tag" && git push --tags
         env:
