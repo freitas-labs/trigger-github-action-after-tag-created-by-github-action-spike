@@ -4,8 +4,7 @@ on:
     tags:
       - "*"
   workflow_run:
-    workflows:
-      - "publish-tag"
+    workflows: ["publish-tag"]
     types:
       - completed
 
