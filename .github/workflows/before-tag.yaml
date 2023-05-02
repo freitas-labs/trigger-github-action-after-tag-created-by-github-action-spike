@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'release tag'
+      - run: git tag -a "$RANDOM" -m "new tag" && git push --tags
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
