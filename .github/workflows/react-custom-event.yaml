@@ -2,7 +2,7 @@ name: React to Custom Event
 
 on:
   repository_dispatch:
-    types: [my-custom-event]
+    types: [my-custom-event2]
 
 jobs:
   react:
