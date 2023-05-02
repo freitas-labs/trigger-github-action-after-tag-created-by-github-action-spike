@@ -3,6 +3,11 @@ on:
   push:
     tags:
       - "*"
+  workflow_run:
+    workflows:
+      - "publish-tag"
+    types:
+      - completed
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
