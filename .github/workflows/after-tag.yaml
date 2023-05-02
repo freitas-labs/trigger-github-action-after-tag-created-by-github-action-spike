@@ -18,5 +18,10 @@ jobs:
           else
             echo "no tag"
           fi
+
+          echo "$(git log -n 1 --pretty=format:'%H')"
+          echo "$(git log -n 1 --pretty=format:'%H' $(git describe --abbrev=0 --tags))"
+          echo "$(git describe)"
+          echo "$(git tag)"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
