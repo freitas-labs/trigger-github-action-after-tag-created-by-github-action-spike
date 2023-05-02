@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - run: git fetch --prune --unshallow
       - run: |
           if [[ "$(git log -n 1 --pretty=format:'%H')" == "$(git log -n 1 --pretty=format:'%H' $(git describe --abbrev=0 --tags))" ]]; then
             echo "yay after tag"
