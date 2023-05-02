@@ -1,0 +1,12 @@
+name: React to Custom Event
+
+on:
+  repository_dispatch:
+    types: [my-custom-event]
+
+jobs:
+  react:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Message
+        run: echo ${{ github.event.client_payload.message }}

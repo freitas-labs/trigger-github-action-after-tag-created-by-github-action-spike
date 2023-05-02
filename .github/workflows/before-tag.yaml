@@ -2,7 +2,7 @@ name: before-tag
 on:
   push:
     branches:
-      - "main"
+      - "disabled"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
